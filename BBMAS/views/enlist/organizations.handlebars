@@ -1,0 +1,21 @@
+<div class="container">
+<h2 class="container-header" style="line-height: 4ps;"><b> Below are organizations associated with us: </bd> </h2>
+  <div class="card-deck">
+    {{#each users}}
+      <div class="card">
+        <h4 class="card-header"><b>{{name}}</b></h4>
+        <div class="card-body mb-2">
+          <hr style="	background-color: #fff;	border-top: 2px dashed #8c8b8b;">
+          <p><b>Email: </b>{{email}}</p>
+          <p><b>Address: </b>{{address}}</p>
+          <p><b>Website: </b><a href="{{website}}">{{website}}</a></p>
+          <p><b>Contact No: </b>{{contactno}}</p>
+          <p><b>Fax: </b>{{fax}}</p>
+        </div>
+      </div>
+
+    {{else}}
+      <p>No video ideas listed</p>
+    {{/each}}
+  </div>
+</div>

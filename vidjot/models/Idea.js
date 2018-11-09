@@ -7,7 +7,19 @@ const IdeaSchema = new Schema({
     type: String,
     required: true
   },
+  videotype:{
+    type: String,
+    required: true
+  },
   details:{
+    type: String,
+    required: true
+  },
+  author: {
+    type: String,
+    required: true
+  } ,
+  user:{
     type: String,
     required: true
   },

@@ -1,0 +1,37 @@
+<div class="card">
+  {{#if ideas}}
+    <div class="row font-weight-bold">
+      <div class="col-sm"> Donor Name </div>
+      <div class="col-sm"> Blood Group </div>
+      <div class="col-sm"> Age </div>
+      <div class="col-sm"> Contact No </div>
+      <div class="col-sm"> email </div>
+      <div class="col-sm"> Address </div>
+      <div class="col-sm"> Registered By </div>
+      <div class="col-sm"> Operations</div>
+      <hr style="width: 90%; color: #FE2E2E; height: 1px; background-color:#FE2E2E;" />
+    </div>
+    {{#each ideas}}
+
+      <div class="row">
+        <div class="col-sm"> {{title}} </div>
+        <div class="col-sm"> {{bloodgroup}}</div>
+        <div class="col-sm"> {{age}} </div>
+        <div class="col-sm"> {{contactno}} </div>
+        <div class="col-sm"> {{email}} </div>
+        <div class="col-sm" style ="overflow:scroll; height: 50px;"> {{address}} </div>
+        <div class="col-sm"> {{registeredby}} </div>
+        <div class="col-sm btn-group" role="group" aria-label="Basic example">
+          <a class="btn btn-outline-primary btn-sm ml-1" href="/ideas/edit/{{id}}">Edit</a>
+          <form action="/ideas/{{id}}?_method=DELETE" method="post">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" class="btn btn-outline-danger btn-sm" value="Delete">
+          </form>
+        </div>
+      </div>
+    {{/each}}
+
+  {{else}}
+    <p>No video ideas listed</p>
+  {{/if}}
+</div>
